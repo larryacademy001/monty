@@ -8,6 +8,9 @@
 #include <ctype.h>
 
 
+bus_t bus = {NULL, NULL, NULL, 0};
+
+
 /**
  * main - entry point
  * @argc: arguments count
