@@ -3,15 +3,15 @@
 /**
  * addqueue - add node to the tail stack
  * @n: new_value
- * @head: head of the stack
+ * @stack: head of the stack
  * Return: no return
 */
 
-void addqueue(stack_t **head, int n)
+void addqueue(stack_t **stack, int n)
 {
 	stack_t *new_node, *aux;
 
-	aux = *head;
+	aux = *stack;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
@@ -26,7 +26,7 @@ void addqueue(stack_t **head, int n)
 	}
 	if (!aux)
 	{
-		*head = new_node;
+		*stack = new_node;
 		new_node->prev = NULL;
 	}
 	else

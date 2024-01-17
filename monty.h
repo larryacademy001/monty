@@ -59,16 +59,16 @@ extern bus_t bus;
 
 
 int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *file);
-void free_stack(stack_t *head);
-void addnode(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
-void push(stack_t **head, unsigned int line_number);
-void pint(stack_t **head, unsigned int line_number);
-void add(stack_t **head, unsigned int line_number);
-void swap(stack_t **head, unsigned int line_number);
-void nop(stack_t **head, unsigned int line_number);
-void pop(stack_t **head, unsigned int line_number);
-void pall(stack_t **head, unsigned int line_number);
+void free_stack(stack_t *stack);
+void addnode(stack_t **stack, int n);
+void addqueue(stack_t **stack, int n);
+void push(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 
 #endif

@@ -7,7 +7,7 @@
  * @line_number: line_number
  * Return: no return
 */
-void push(stack_t **head, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 	int n, j = 0, flag = 0;
 
@@ -23,17 +23,17 @@ void push(stack_t **head, unsigned int line_number)
 		{ fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			fclose(bus.file);
 			free(bus.content);
-			free_stack(*head);
+			free_stack(*stack);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		free_stack(*stack);
 		exit(EXIT_FAILURE); }
 	n = atoi(bus.arg);
 	if (bus.lifi == 0)
-		addnode(head, n);
+		addnode(stack, n);
 	else
-		addqueue(head, n);
+		addqueue(stack, n);
 }

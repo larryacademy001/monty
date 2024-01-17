@@ -8,12 +8,12 @@
  *
  */
 
-void add(stack_t **head, unsigned int line_number)
+void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *h;
 	int len = 0, aux;
 
-	h = *head;
+	h = *stack;
 	while (h)
 	{
 		h = h->next;
@@ -27,9 +27,9 @@ void add(stack_t **head, unsigned int line_number)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
+	h = *stack;
 	aux = h->n + h->next->n;
 	h->next->n = aux;
-	*head = h->next;
+	*stack = h->next;
 	free(h);
 }
