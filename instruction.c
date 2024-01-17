@@ -23,6 +23,7 @@ int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *
 		{"rotr", rotr},
 		{"queue", queue},
 		{"stack", stacking},
+		{"pall$", pall},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
