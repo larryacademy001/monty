@@ -3,7 +3,7 @@
 
 /**
  * add - adds the top two elements of the stack
- * @head: stack head
+ * @stack: stack head
  * @line_number: line number
  *
  */

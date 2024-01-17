@@ -1,24 +1,24 @@
 #include "monty.h"
 /**
-* instruction - executes the opcode
-* @stack: head linked list - stack
-* @counter: line_counter
-* @file: file to be used
-* @line_number: line number
-* Return: no return
-*/
+ * instruction - executes the opcode
+ * @stack: head linked list - stack
+ * @content: line_counter
+ * @file: file to be used
+ * @line_number: line number
+ * Return: no return
+ */
 int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *file)
 {
 	instruction_t opst[] = {
-				{"push", push},
-				{"pall", pall},
-				{"pint", pint},
-				{"pop", pop},
-				{"swap", swap},
-				{"add", add},
-				{"nop", nop},
-				{NULL, NULL}
-				};
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
+		{NULL, NULL}
+	};
 	unsigned int i = 0;
 	char *op;
 

@@ -57,6 +57,8 @@ typedef struct bus_s
 }  bus_t;
 extern bus_t bus;
 
+bus_t bus = {NULL, NULL, NULL, 0};
+
 
 int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *file);
 void free_stack(stack_t *stack);
