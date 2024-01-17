@@ -16,6 +16,7 @@ int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *
 		{"sub", sub},
 		{"mul", mul},
 		{"div", division},
+		{"mod", mod},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
