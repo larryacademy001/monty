@@ -7,7 +7,7 @@
 void pall(stack_t **head, unsigned int line_number)
 {
 	stack_t *h;
-	(void)line number;
+	(void)line_number;
 
 	h = *head;
 	if (h == NULL)
