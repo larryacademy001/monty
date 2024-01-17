@@ -3,23 +3,33 @@
 
 /**
  * add - adds the top two elements of the stack
- * @stack: double pointer to the stack
+ * @head: stack head
  * @line_number: line number
+ *
  */
-void add(stack_t **stack, unsigned int line_number)
+
+void add(stack_t **head, unsigned int line_number)
 {
-    stack_t *top;
-    int sum;
+	stack_t *h;
+	int len = 0, aux;
 
-    if (*stack == NULL || (*stack)->next == NULL)
-    {
-        fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-
-    top = *stack;
-    sum = top->n + top->next->n;
-    top->next->n = sum;
-    *stack = top->next;
-    free(top);
+	h = *head;
+	while (h)
+	{
+		h = h->next;
+		len++;
+	}
+	if (len < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	h = *head;
+	aux = h->n + h->next->n;
+	h->next->n = aux;
+	*head = h->next;
+	free(h);
 }

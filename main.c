@@ -1,62 +1,46 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/**
+* main - entry point
+* @argc: arguments count
+* @argv: argument vector
+* Return: 0 on success
+*/
 
-stack_t **stack = NULL;
-unsigned int line_number = 0;
-
-int main(int argc, char **argv)
+bus_t bus = {NULL, NULL, NULL, 0};
+int main(int argc, char *argv[])
 {
-    char *line = NULL;
-    size_t len = 0;
-    char *read;
-    char *token = NULL;
-    char *opcode = NULL;
-     FILE *file = fopen(argv[1], "r");
+	char *content;
+	FILE *file;
+	size_t size = 0;
+	ssize_t read_line = 1;
+	stack_t *stack = NULL;
+	unsigned int line_number = 0;
 
-    if (argc != 2)
-    {
-        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
-        return (EXIT_FAILURE);
-    }
-
-    file = fopen(argv[1], "r");
-    if (!file)
-    {
-        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-        return (EXIT_FAILURE);
-    }
-
-    while ((read = fgets(line, len, file)) != NULL)
-
-    {
-        line_number++;
-        token = strtok(line, " \t\n");
-        if (!token)
-            continue;
-
-        opcode = token;
-        if (strcmp(opcode, "push") == 0)
-            push(stack, line_number);
-        else if (strcmp(opcode, "pall") == 0)
-		pall(stack, line_number);
-        else if (strcmp(opcode, "pint") == 0)
-		pint(stack, line_number);
-        else if (strcmp(opcode, "pop") == 0)
-		pop(stack, line_number);
-        else if (strcmp(opcode, "swap") == 0)
-		swap(stack, line_number);
-        else if (strcmp(opcode, "add") == 0)
-		add(stack, line_number);
-        else if (strcmp(opcode, "nop") == 0)
-		nop();
-        else
-            fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-    }
-
-    free(line);
-    fclose(file);
-
-    return (EXIT_SUCCESS);
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	file = fopen(argv[1], "r");
+	bus.file = file;
+	if (!file)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+	while (read_line > 0)
+	{
+		content = NULL;
+		read_line = getline(&content, &size, file);
+		bus.content = content;
+		line_number++;
+		if (read_line > 0)
+		{
+			execute(content, &stack, line_number, file);
+		}
+		free(content);
+	}
+	free_stack(stack);
+	fclose(file);
+return (0);
 }

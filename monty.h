@@ -41,9 +41,8 @@ typedef struct instruction_s
 
 
 
-
-int push(stack_t **stack, unsigned int line_number);
-void nop(void);
+void push(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
