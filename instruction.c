@@ -21,6 +21,8 @@ int instruction(char *content, stack_t **stack, unsigned int line_number, FILE *
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
+		{"queue", queue},
+		{"stack", stacking},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
