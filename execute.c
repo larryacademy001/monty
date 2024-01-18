@@ -35,7 +35,7 @@ int op_execute(char *content, stack_t **stack_head, unsigned int count, FILE *fi
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	cis.arg = strtok(NULL, " \n\t");
+	cis.argument = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
