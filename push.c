@@ -31,7 +31,7 @@ void op_push(stack_t **head, unsigned int count)
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(cis.arg);
-	if (cis.lifi == 0)
+	if (cis.op_flag == 0)
 		addnode(head, n);
 	else
 		addqueue(head, n);
