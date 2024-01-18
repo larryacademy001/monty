@@ -25,7 +25,7 @@ int op_execute(char *content, stack_t **stack_head, unsigned int count, FILE *fi
 				{"rotl", op_rotl},
 				{"rotr", op_rotr},
 				{"queue", op_queue},
-				{"stack_head", op_stack_head},
+				{"stack_head", op_stack},
 				{NULL, NULL}
 				};
 
