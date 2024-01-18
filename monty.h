@@ -55,31 +55,23 @@ typedef struct comm_info
 	int op_flag;
 }  comm_info_st;
 extern comm_info_st cis;
-/* Task 0. push, pall*/
+/* Task Functions */
 void op_push(stack_t **stack_head, unsigned int count);
 void op_pall(stack_t **stack_head, unsigned int count);
-
-/* Task 1. pint*/
 void op_pint(stack_t **stack_head, unsigned int count);
-
-/* Task 2. pop*/
 void op_pop(stack_t **stack_head, unsigned int count);
-
-/* Task 3. swap */
 void op_swap(stack_t **stack_head, unsigned int count);
-
-/* Task 4. add */
 void op_add(stack_t **stack_head, unsigned int count);
-
-/* Task 5. nop */
 void op_nop(stack_t **stack_head, unsigned int count);
-
-/* Task 6. sub */
 void op_sub(stack_t **stack_head, unsigned int count);
-
-/* Task 7. div */
 void op_div(stack_t **stack_head, unsigned int count);
-
+void op_mul(stack_t **stack_head, unsigned int count);
+void op_mod(stack_t **stack_head, unsigned int count);
+void op_mod(stack_t **stack_head, unsigned int count);
+void op_pchar(stack_t **head, unsigned int counter);
+void op_pstr(stack_t **head, unsigned int counter);
+void op_rotl(stack_t **head, unsigned int counter);
+void op_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
 /* Monty Functions */
 int execute(char *content, stack_t **stack_head, unsigned int counter, FILE *file);
 #endif
