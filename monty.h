@@ -38,7 +38,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
 /**
  * struct comm_info - variables - arguments, file, line content
  * @argument: value
@@ -54,4 +53,5 @@ typedef struct comm_info
 	char *content;
 	int op_flag;
 }  comm_info_st;
+extern comm_info_st cis;
 #endif
