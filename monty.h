@@ -55,6 +55,7 @@ typedef struct comm_info
 	int op_flag;
 }  comm_info_st;
 extern comm_info_st cis;
+
 /* Task Functions */
 void op_push(stack_t **stack_head, unsigned int count);
 void op_pall(stack_t **stack_head, unsigned int count);
@@ -68,10 +69,13 @@ void op_div(stack_t **stack_head, unsigned int count);
 void op_mul(stack_t **stack_head, unsigned int count);
 void op_mod(stack_t **stack_head, unsigned int count);
 void op_mod(stack_t **stack_head, unsigned int count);
-void op_pchar(stack_t **head, unsigned int counter);
-void op_pstr(stack_t **head, unsigned int counter);
-void op_rotl(stack_t **head, unsigned int counter);
-void op_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void op_pchar(stack_t **stack_head, unsigned int counter);
+void op_pstr(stack_t **stack_head, unsigned int counter);
+void op_rotl(stack_t **stack_head, unsigned int counter);
+void op_rotr(stack_t **stack_head, __attribute__((unused)) unsigned int counter);
+void op_queue(stack_t **stack_head, unsigned int counter);
+void op_stack(stack_t **stack_head, unsigned int counter);
+
 /* Monty Functions */
 int execute(char *content, stack_t **stack_head, unsigned int counter, FILE *file);
 #endif
