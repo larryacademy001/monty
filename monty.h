@@ -58,4 +58,7 @@ extern comm_info_st cis;
 /* Task 0. push, pall*/
 void op_push(stack_t **head, unsigned int count);
 void op_pall(stack_t **head, unsigned int count);
+
+/* Task 1. pint*/
+void op_pint(stack_t **head, unsigned int count);
 #endif
