@@ -56,9 +56,15 @@ typedef struct comm_info
 }  comm_info_st;
 extern comm_info_st cis;
 /* Task 0. push, pall*/
-void op_push(stack_t **head, unsigned int count);
-void op_pall(stack_t **head, unsigned int count);
+void op_push(stack_t **stack_head, unsigned int count);
+void op_pall(stack_t **stack_head, unsigned int count);
 
 /* Task 1. pint*/
-void op_pint(stack_t **head, unsigned int count);
+void op_pint(stack_t **stack_head, unsigned int count);
+
+/* Task 2. pop*/
+void op_pop(stack_t **stack_head, unsigned int count);
+
+/* Monty Functions */
+int execute(char *content, stack_t **stack_head, unsigned int counter, FILE *file);
 #endif
