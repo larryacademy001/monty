@@ -2,10 +2,10 @@
 comm_info_st cis = {NULL, NULL, NULL, 0};
 
 /**
-* main - monty code interpreter
-* @argc: number of arguments
-* @argv: monty file location
-* Return: 0 on success
+* main - main function for monty code interpreter
+* @argc: no of arguments
+* @argv: location of the monty file
+* Return: If success return 0
 */
 int main(int argc, char *argv[])
 {

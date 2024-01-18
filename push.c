@@ -2,11 +2,11 @@
 
 /**
  * op_push - function to add node to the stack
- * @head: stack head
+ * @stack_head: stack head
  * @count: line_number
  * Return: nothing
 */
-void op_push(stack_t **head, unsigned int count)
+void op_push(stack_t **stack_head, unsigned int count)
 {
 	int n, j = 0, flag = 0;
 
@@ -22,17 +22,17 @@ void op_push(stack_t **head, unsigned int count)
 		{ fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(cis.file);
 			free(cis.content);
-			free_stack(*head);
+			free_stack(*stack_head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(cis.file);
 		free(cis.content);
-		free_stack(*head);
+		free_stack(*stack_head);
 		exit(EXIT_FAILURE); }
 	n = atoi(cis.arg);
 	if (cis.op_flag == 0)
-		addnode(head, n);
+		addnode(stack_head, n);
 	else
-		addqueue(head, n);
+		addqueue(stack_head, n);
 }
