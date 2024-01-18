@@ -38,4 +38,20 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
+/**
+ * struct comm_info - variables - arguments, file, line content
+ * @argument: value
+ * @file: Pointer to the monty file
+ * @content: line content
+ * @op_flag: flag to change between stack and queue
+ * Description: global variables for keeping values throughout the program
+ */
+typedef struct comm_info
+{
+	char *argument;
+	FILE *file;
+	char *content;
+	int op_flag;
+}  comm_info_st;
 #endif
