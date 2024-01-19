@@ -1,7 +1,5 @@
 #include "monty.h"
 
-//comm_info_st cis = {NULL, NULL, NULL, 0};
-
 /**
 * main - main function for monty code interpreter
 * @argc: no of arguments
@@ -10,7 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
-	cis.argument = NULL, cis.content = NULL , 
+	cis.argument = NULL, cis.content = NULL ,
 	cis.file = NULL, cis.op_flag = 0;
 	stack_t *stack = NULL;
 	unsigned int count = 0;
