@@ -11,10 +11,10 @@ void op_swap(stack_t **stack_head, unsigned int count)
 	stack_t *head;
 	int len = 0, temp_p;
 
-	h = *stack_head;
-	while (h)
+	head = *stack_head;
+	while (head)
 	{
-		h = h->next;
+		head = head->next;
 		len++;
 	}
 	if (len < 2)
