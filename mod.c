@@ -33,7 +33,7 @@ void op_mod(stack_t **stack_head, unsigned int count)
 		fprintf(stderr, "L%d: division by zero\n", count);
 		fclose(cis.file);
 		free(cis.content);
-		free_stack(*stack_head);
+		free_the_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
 	temp_p = head->next->n % head->n;
