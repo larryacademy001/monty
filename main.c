@@ -8,15 +8,14 @@
 */
 int main(int argc, char *argv[])
 {
-	cis.argument = NULL, cis.content = NULL,
-	cis.file = NULL, cis.op_flag = 0;
 	stack_t *stack = NULL;
-
 	unsigned int count = 0;
 	char *content;
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
+	cis.argument = NULL, cis.content = NULL,
+	cis.file = NULL, cis.op_flag = 0;
 
 	if (argc != 2)
 	{
