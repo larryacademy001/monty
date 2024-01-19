@@ -69,14 +69,16 @@ void op_div(stack_t **stack_head, unsigned int count);
 void op_mul(stack_t **stack_head, unsigned int count);
 void op_mod(stack_t **stack_head, unsigned int count);
 void op_mod(stack_t **stack_head, unsigned int count);
-void op_pchar(stack_t **stack_head, unsigned int counter);
-void op_pstr(stack_t **stack_head, unsigned int counter);
-void op_rotl(stack_t **stack_head, unsigned int counter);
-void op_rotr(stack_t **stack_head, __attribute__((unused)) unsigned int counter);
-void op_queue(stack_t **stack_head, unsigned int counter);
-void op_stack(stack_t **stack_head, unsigned int counter);
+void op_pchar(stack_t **stack_head, unsigned int count);
+void op_pstr(stack_t **stack_head, unsigned int count);
+void op_rotl(stack_t **stack_head, unsigned int count);
+void op_rotr(stack_t **stack_head, __attribute__((unused)) unsigned int count);
+void op_queue(stack_t **stack_head, unsigned int count);
+void op_stack(stack_t **stack_head, unsigned int count);
 
 /* Monty Functions */
-int execute(char *content, stack_t **stack_head, unsigned int counter, FILE *file);
+int execute(char *content, stack_t **stack_head, unsigned int count, FILE *file);
 void free_the_stack(stack_t *stack_head);
+void op_addnode(stack_t **stack_head, int number);
+void op_addqueue(stack_t **stack_head, int number);
 #endif

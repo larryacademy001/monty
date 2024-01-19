@@ -8,7 +8,7 @@
 */
 void op_push(stack_t **stack_head, unsigned int count)
 {
-	int n, j = 0, flag = 0;
+	int number, j = 0, flag = 0;
 
 	if (cis.argument)
 	{
@@ -22,7 +22,7 @@ void op_push(stack_t **stack_head, unsigned int count)
 		{ fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(cis.file);
 			free(cis.content);
-			free_stack(*stack_head);
+			free_the_stack(*stack_head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", count);
@@ -30,9 +30,9 @@ void op_push(stack_t **stack_head, unsigned int count)
 		free(cis.content);
 		free_stack(*stack_head);
 		exit(EXIT_FAILURE); }
-	n = atoi(cis.argument);
+	number = atoi(cis.argument);
 	if (cis.op_flag == 0)
-		addnode(stack_head, n);
+		op_addnode(stack_head, number);
 	else
-		addqueue(stack_head, n);
+		op_addqueue(stack_head, number);
 }
