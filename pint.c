@@ -12,7 +12,7 @@ void op_pint(stack_t **stack_head, unsigned int count)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		fclose(cis.file);
 		free(cis.content);
-		free_stack(*stack_head);
+		free_the_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack_head)->n);
