@@ -77,7 +77,7 @@ void op_queue(stack_t **stack_head, unsigned int count);
 void op_stack(stack_t **stack_head, unsigned int count);
 
 /* Monty Functions */
-int execute(char *content, stack_t **stack_head, unsigned int count, FILE *file);
+int op_execute(char *content, stack_t **stack_head, unsigned int count, FILE *file);
 void free_the_stack(stack_t *stack_head);
 void op_addnode(stack_t **stack_head, int number);
 void op_addqueue(stack_t **stack_head, int number);
