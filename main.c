@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
+
 	cis.argument = NULL, cis.content = NULL,
 	cis.file = NULL, cis.op_flag = 0;
 
