@@ -1,6 +1,6 @@
 #include "monty.h"
 
-comm_info_st cis = {NULL, NULL, NULL, 0};
+comm_info_st cis;
 
 /**
 * main - main function for monty code interpreter
