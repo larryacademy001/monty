@@ -8,30 +8,15 @@
 * @count: line_count
 * Return: Nothing
 */
-int op_execute(char *content, stack_t **stack_head, unsigned int count, FILE *file)
+int op_execute(char *content, stack_t **stack_head,
+	unsigned int count, FILE *file)
 {
-	instruction_t opst[] = {
-				{"push", op_push}, {"pall", op_pall}, {"pint", op_pint},
-				{"pop", op_pop},
-				{"swap", op_swap},
-				{"add", op_add},
-				{"nop", op_nop},
-				{"sub", op_sub},
-				{"div", op_div},
-				{"mul", op_mul},
-				{"mod", op_mod},
-				{"pchar", op_pchar},
-				{"pstr", op_pstr},
-				{"rotl", op_rotl},
-				{"rotr", op_rotr},
-				{"queue", op_queue},
-				{"stack_head", op_stack},
-				{NULL, NULL}
-				};
-
+	instruction_t opst[] = {{"push", op_push}, {"pall", op_pall}, {"pint", op_pint},
+	{"pop", op_pop},{"swap", op_swap},{"add", op_add},{"nop", op_nop},{"sub", op_sub},
+	{"div", op_div},{"mul", op_mul},{"mod", op_mod},{"pchar", op_pchar},{"pstr", op_pstr},
+	{"rotl", op_rotl},{"rotr", op_rotr},{"queue", op_queue},{"stack_head", op_stack},{NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
-
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
