@@ -15,7 +15,7 @@ int op_execute(char *content, stack_t **stack_head,
 	{"pint", op_pint},  {"pop", op_pop},  {"swap", op_swap},
 	{"add", op_add}, {"nop", op_nop}, {"sub", op_sub},
 	{"div", op_div}, {"mul", op_mul}, {"mod", op_mod},
-	{NULL, NULL}};
+	{"pchar", op_pchar}, {NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
 
