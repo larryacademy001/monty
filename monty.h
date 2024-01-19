@@ -78,4 +78,5 @@ void op_stack(stack_t **stack_head, unsigned int counter);
 
 /* Monty Functions */
 int execute(char *content, stack_t **stack_head, unsigned int counter, FILE *file);
+void free_the_stack(stack_t *stack_head);
 #endif
