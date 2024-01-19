@@ -13,7 +13,7 @@ int op_execute(char *content, stack_t **stack_head,
 {
 	instruction_t opst[] = {{"push", op_push}, {"pall", op_pall},
 	{"pint", op_pint},  {"pop", op_pop},  {"swap", op_swap},
-	{NULL, NULL}};
+	{"add", op_add}, {NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
 
