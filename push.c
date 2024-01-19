@@ -28,7 +28,7 @@ void op_push(stack_t **stack_head, unsigned int count)
 	{ fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(cis.file);
 		free(cis.content);
-		free_stack(*stack_head);
+		free_the_stack(*stack_head);
 		exit(EXIT_FAILURE); }
 	number = atoi(cis.argument);
 	if (cis.op_flag == 0)
