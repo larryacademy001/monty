@@ -15,8 +15,8 @@ void op_queue(stack_t **stack_head, unsigned int count)
 /**
  * op_addqueue - function to add node to the tail stack
  * @number: new_value
- * @head: head of the stack
- * Return: no return
+ * @stack_head: head of the stack
+ * Return: Nothing
 */
 void op_addqueue(stack_t **stack_head, int number)
 {
