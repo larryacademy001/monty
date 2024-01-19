@@ -18,7 +18,7 @@ void op_addnode(stack_t **stack_head, int number)
 		exit(0); }
 	if (temp_p)
 		temp_p->prev = new_node;
-	new_node->number = number;
+	new_node->n = number;
 	new_node->next = *stack_head;
 	new_node->prev = NULL;
 	*stack_head = new_node;
