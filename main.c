@@ -1,5 +1,4 @@
 #include "monty.h"
-comm_info_st cis = {NULL, NULL, NULL, 0};
 
 /**
 * main - main function for monty code interpreter
@@ -9,6 +8,7 @@ comm_info_st cis = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
+	comm_info_st cis = {NULL, NULL, NULL, 0};
 	stack_t *stack = NULL;
 	unsigned int count = 0;
 	char *content;
