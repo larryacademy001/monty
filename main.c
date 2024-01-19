@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	cis.argument = NULL, cis.content = NULL,
 	cis.file = NULL, cis.op_flag = 0;
-	
+
 	stack_t *stack = NULL;
 	unsigned int count = 0;
 	char *content;
