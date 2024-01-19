@@ -20,9 +20,9 @@ void op_swap(stack_t **stack_head, unsigned int count)
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", count);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*stack_head);
+		fclose(cis.file);
+		free(cis.content);
+		free_the_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
 	head = *stack_head;
