@@ -19,6 +19,7 @@ int op_execute(char *content, stack_t **stack_head,
 	{"stack_head", op_stack}, {NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
+
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
